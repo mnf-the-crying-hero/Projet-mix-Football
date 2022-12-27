@@ -1,22 +1,79 @@
 [
    {
-           "question":"quel equipe national a gagner la coupe du monde 2022",
-            "reponse":"argentine",
-            "proposition":["argentine","france","maroc","brazil"]
+           "question":"Laquel de ces équipes n'a jamais remporté le ligue des champions?",
+            "reponse":"Manchester City",
+            "proposition":["Celtic","Manchester City","Etoile Rouge de Belgrade","Real Madrid"]
                
        
-    },   
+    }, 
+      
     {
-        "question":"alger?",
-         "reponse":"d",
-         "proposition":["argentdddine","d","maroc","brazdil"]
+        "question":"Où s'est déroulée la première Coupe du Monde de la FIFA, en 1930?",
+         "reponse":"Uruguay",
+         "proposition":["Algerie","France","Bresil","Uruguay"]
 
     },
+
     {
-        "question":"quel equipe national a gagner la coupe d'afrique 2022",
-        "reponse":"algerie",
-        "proposition":["maroc","algerie","tunisie","egypte"]
+        "question":" Quel est la seule équipe, à ce jour, à avoir participé à toutes les éditions de la cdm?",
+        "reponse":"Bresil",
+        "proposition":["maroc","Bresil","Argentine","France"]
+    },
+
+    {
+        "question":" Lequel de ces joueurs n'a jamais remporté le ballon d'or?",
+        "reponse":"Pele",
+        "proposition":["Michael Owen","Ruud Gullit","Roberto Baggio","Pele"]
+    },
+
+    {
+        "question":" Quel est le nombre de Ballon d'Or remporté par Messi ?",
+        "reponse":"7",
+        "proposition":["6","7","8","2"]
+    },
+
+    {
+        "question":" Lequel de ces clubs n'a jamais compter Zidane parmi ses rangs ?",
+        "reponse":"Ac Milan",
+        "proposition":["Real Madrid","Girondins de Bordeaux","Juventus","Ac Milan"]
+    },
+
+    {
+        "question":" Laquelle de ces équipes a remporté le plus de fois la CAN?",
+        "reponse":"Algerie",
+        "proposition":["Algerie","Tunisie","Maroc","Bresil"]
+    },
+
+    {
+        "question":" Qui est le seul joueur africain a avoir remporté le ballon d'or?",
+        "reponse":"Weah",
+        "proposition":["Etoo","Weah","Okocha","Mahrez"]
+    },
+
+    {
+        "question":" Qui détient le record du nombre de but inscrit en coupe du monde?",
+        "reponse":"Miroslav Klose",
+        "proposition":["Messi","Gerd Muller","Ronaldo","Miroslav Klose"]
+    },
+
+    {
+        "question":" Qui détient le record du nombre de but inscrit en une seule édition de la cdm?",
+        "reponse":"Just Fontaine",
+        "proposition":["Messi","Gerd Muller","Just Fontaine","Miroslav Klose"]
+    },
+
+    {
+        "question":" Quel est le pays le plus titré en Coupe du monde?",
+        "reponse":"Bresil",
+        "proposition":["Italie","Allemagne","Bresil","France"]
+    },
+    
+    {
+        "question":"  Quel joueur réalise la main de dieu lors du mondial 86?",
+        "reponse":"Diego Maradona",
+        "proposition":["Messi","Johan Cruyff","Pele","Diego Maradona"]
     }
+
 
  
 ]

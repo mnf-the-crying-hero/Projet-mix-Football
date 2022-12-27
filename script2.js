@@ -1,4 +1,7 @@
 /*JOUER*/
+if (document.cookie.indexOf("username") == -1) {
+    window.location.href='home.html'
+}
 var requestURL1='data.json';
 var i=0;
 const quest=document.getElementById("question");
@@ -86,7 +89,7 @@ rep.forEach(element => {
 function next(){
     rep.forEach(elemt=>{
         if(elemt.classList.contains("chose")){
-            score++;
+           
             elemt.classList.remove("chose")
         }
     })
@@ -99,11 +102,11 @@ function next(){
             i=parseInt(Math.random() * data.length);
 
         }
-
+      
     
         if(reponse==num){
 
-        
+            score++;
         
             question=data[i].question;
         
@@ -121,16 +124,27 @@ function next(){
                 //console.log(proposition );
             }
             rand.push(i);
-        }
+        }else if(reponse!=num){
+            document.getElementById("menu_play").textContent=getCookie("username")+",t'as perdu ton score est:"+score;
+    
+        } 
     }else if(reponse!=num){
-        document.getElementById("menu_play").textContent=document.cookie+",t'as perdu ton score est:"+score;
+        document.getElementById("menu_play").textContent=getCookie("username")+",t'as perdu ton score est:"+score;
 
     }else{
-        document.getElementById("menu_play").textContent=document.cookie+",t'as gagné ton score est:"+score;
+        score++;
+        document.getElementById("menu_play").textContent=getCookie("username")+",t'as gagné ton score est:"+score;
     }
    
 
 }
+function getCookie(cname) {
+    const cookieValue = document.cookie
+    .split('; ')
+    .find((row) => row.startsWith('username='))
+    ?.split('=')[1];
+    return cookieValue;
+ }
 console.log()
  
 

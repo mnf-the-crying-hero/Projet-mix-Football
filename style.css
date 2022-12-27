@@ -16,8 +16,56 @@ main{
     height: 100vh;
     overflow-y: hidden;
 }
-.menu{
+/*create button return*/
  
+.back_return{
+    width: 80px;
+    height: 80px;
+    background-color: #0764a7;
+    position: absolute;
+     
+ 
+    top: 2%;
+    margin-left: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px black;
+    cursor: pointer;
+}
+.arrow{
+    margin-right: 1em;
+    height: 0.5em;
+    width: 2.5em;
+    position: relative;
+    background: #ffffff;
+    transition: all 0.2s;
+    top: 45%;
+    left: 25%;
+   
+}
+.arrow::before,.arrow::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ffffff;
+    height: 0.4em;
+    width: 1.5em;
+}
+.arrow::before {
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+    top: 0.9px;
+}
+  
+.arrow::after {
+    transform: rotate(45deg);
+    transform-origin: left top;
+    top: -0.9px;
+} 
+/*******index.html*******/
+.menu{
+    margin: 0 auto;
+    width: 1600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,15 +75,17 @@ main{
     text-decoration: none;
     color: #fff;
 }
-.card{ border-radius: 8px;
+.card{
+   border-radius: 8px;
    background-color: #0F77C3; 
    cursor: pointer;height: 471px;
 }
 
 .play{
     width: 40%;
-    
-    
+    display: flex;
+    flex-direction: column;
+  
     float: right;    
 }
 .play h1{
@@ -45,15 +95,15 @@ main{
     width: 100%;
     height: 320px;
     object-fit: cover;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0px 0px;   
 }
-.play div{
+.play .joue{
     padding: 20px;
-    
+     
     height: 100px;
     line-height: 4em;
 }
-.play a:hover>img{
+.play:hover> div img{
     filter: blur(0.8px);
 }
 .play:hover{
@@ -64,18 +114,31 @@ main{
 }
 .droit{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     
+    gap: 10px;
 }
 .matches {
     position: relative;
-    height: 100%;
-    
+    width: 100%;    
+    height: 360px;
     overflow: hidden;
 }
- 
+ .profil{
+    width: 100px;
+    
+ }
+ .matches {
+    background-image: url("images/kylian-mbappe-fifa-22-n8-1920x1080.png");
+    background-size: cover;
+}
+ /*
 .matches .messi{
     
-    width: 490px;
-    height: 480px;
+    width: 441px;
+    height: 360px;
     position: absolute;
     top: 0;
     left: 330px;   
@@ -86,23 +149,23 @@ main{
 .matches .ronaldo{
     z-index:1;
     width: 401px;
-    height: 480px;
+    height: 360px;
     position: absolute;
     top: 0;
     
     background: url("images/ronaldo.png");
     background-size: cover;
     
-}
+} */
 .text_hidden{
- 
+ z-index: 1;
     position: absolute;
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0.399);
     width: 100%;
     height: 100%;
     z-index: 9999;
-    transform: translateX(-999px);
+    transform: translateX(-9999px);
     text-align: center;
     padding: 15% 0;
 
@@ -114,22 +177,166 @@ main{
   
     transition: all 0.3s;
 }
- 
+
 .matches h1{
     position: relative;
     z-index: 999;
-    font-size: 100px;
+    font-size: 140px;
     text-align: center;
-    padding: 20%;
+    
     color: #fec211;
  
+}
+ 
+.regle{
+    padding: 10px ;
+    width: 100%;    
+    border-radius: 8px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #0F77C3; 
+    cursor: pointer;
+    gap: 20px;
+}
+.regle .text{
+    transform: translateY(-4.5px);
+}
+.regle:hover{
+  
+    background-color: #0764a7; 
+    
+}
+
+#bar{
+    font-size: 60px;
+    font-weight: 100;
+    padding-left: 20px;
+    padding-right: 5px;
+}
+.gw{
+    z-index: 1;
+    border-color: transparent;
+    background: linear-gradient(
+        90deg,
+        #f9d923,
+        #0b4d7d,
+        
+        #cb49ff,
+        #ff6666,
+        #f9d923
+    );
+    background-size: 400%;
+    -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+     
+    animation:glow 12s linear infinite  ;
+ }
+
+ .gw{
+     color: #ffffff;
+     font-size: 38px;
+     font-size: 1800;
+ }
+  
+ @keyframes glow{
+     from{
+         background-position: 0%;
+     }
+     to{
+         background-position: 400%;
+ 
+     }
+ }
+@media (max-width:1260px) {
+    .matches .messi{
+        width: 400px;
+        left: calc(100% - 60%);
+   }
+   .matches .ronaldo{
+        width: 390px;
+        left: -120px;
+   }
+}
+@media (max-width:950px) {
+    .matches{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .matches h1{
+         font-size: 300px;
+         padding: 0;
+     }
+     .play h1{
+        padding-top: 6%;
+     }
+     .play div .description   {
+        display: none;
+     }
+
+}
+@media (max-width:875px) {
+    .menu{
+        flex-direction: column;
+    }
+    .play{
+        width: 90%;
+        height: 100px;
+            display: flex;
+            overflow-y: hidden;
+        flex-direction: row ;
+        justify-content: center;
+        align-items: center;
+    }
+        .play h1 {
+            padding-top: 0;
+        }
+        .play .joue{
+            width: 100%; 
+      
+        }
+ 
+        .play img{
+            width: 70%;
+            border-radius:8px 0px 0px 8px ;   
+        }
+    .droit{
+        width: 90%;gap: 30px;
+    }
+    .matches{
+        width: 100%;
+    }
+    .back_return{
+        margin-left: 20px;
+       transform: scale(.9);
+    }
+}
+@media (max-width:500px) {
+    .play .joue h1{
+        margin-left: -40%;font-size: 35px;
+    }
+    .matches .messi{
+        display: none;
+    }
+    .regle h1{
+        font-size: 35px;
+    }
+    .matches .ronaldo{
+        width: 390px;
+        left: 0px;
+   }
+   .back_return{
+    transform: scale(0.8);
+   }
 }
  
 /******************play.html*******************/
 
 .menu_play{
     height: auto;
-    width: 800px;
+    max-width: 800px;    width: 80%;
     margin:  100px auto;
     padding: 50px 0;
     display: flex;
@@ -202,11 +409,41 @@ button:hover{
     background-color: #952708;
 
 }
+@media (max-width:825px) {
+    .menu_play{
+         padding-bottom: 0;
+    }
+    .menu_play button{
+        height: 80px;
+    }    
+    body{
+        background-size:  cover     ;
+    }
+}
+@media (max-width:420px) {  
+
+    .menu_play{
+        font-size: 20px;
+        padding-top: 10px;
+     
+    }
+    .menu_play .question {       font-size: 20px;
+        padding:10px 2px 2px 0px;
+    }
+    .reponse div{
+        width: 200px
+    }
+    .menu_play button{
+        height: 50px;
+    }
+}
 /*************home.html************/
 .home{
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(2px);
     background-color: rgba(255, 255, 255, 0.006);  
+    display: flex;
+    flex-direction:row-reverse;
 
 }
 .home .right{
@@ -214,7 +451,7 @@ button:hover{
     background: linear-gradient(  #952708 4% ,#56042C 40%, #191654 100% );
     width: 50%;
     height: 100vh;
-    float: right;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +460,7 @@ button:hover{
  
 
 .home .right img{
-    width: 500px;
+    width: 80%;
 
 }
 .home .right h1{
@@ -258,22 +495,76 @@ button:hover{
     text-align: center;
     padding: 5px;
 }
+@media (max-width:1200px) {
+ 
+    .home .right{
+        width: 50%;
+        height: 100%;
+    }
+  
+    .home .right img{
+        width: 70%;
+    }
+    .home .left{
+        width: 50%;
+    }
+    .home .left input[type="text"]{
+        width: 200px;
+    }
+     
+}
+@media (max-width:690px){
+    .home{
+        background:none;
+      
+        flex-direction: column;
+    }
+    .home .right{
+        width: 100%;
+         padding: 20px;
+    }
+    .home .right h1{
+        position: relative;
+        font-size: 25px;
+        top: 0;
+        left: 0;
+        transform: translateX(0%);
+    }
+    .home .left{
+        width: 100%;
+   
+    }
+    .home .left form{
+        align-items: center;
+        justify-content: center;
+    }
+    .home .left input[type="text"]{
+        width: 50%;
+    }
+    .home .left #valider{
+        width: 100px;
+    }
+}
 
 /********matches.html*****/
 .matches_c{
     width: 80%;
-    height: auto;
+    height: 100%;
+    
     margin: 100px auto;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(2px);
     background-color: #56042cb8;  
     padding:50px;
-  
+     
+}
+::-webkit-scrollbar{
+    display: none;
 }
 .match{
     background-color: #191654;
     width: 95%;
-    
+    height: 200px;
     margin: 0 auto 20px auto;
     color: #000;
     border-bottom: 4px solid #fec211;
@@ -282,26 +573,84 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
+ 
 .match h2{
     color: #fff;
     font-size: 30px;
-
+    
+    width: 30%;
 }
 .match h1{
     color: yellow;
-    font-size: 40px;
+    font-size: 40px;     
 }
 .match img{
-    width: 150px;
+    width: 150px;max-height:200px ;
 }
 .match .equipe1,.match .equipe2{
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+     
     gap:10%;
 }
+ 
 .match .equipe2{
     flex-direction: row-reverse;
+}
+@media (max-width:1600px) {
+    .menu{
+        width: auto;
+    }
+}
+@media (max-width:1200px) {
+    .matches_c{
+        width: 90%;
+    }
+}
+@media (max-width:1000px) {
+    .matches_c{
+        width: 90%;
+        
+    }
+    .match h2{
+        font-size: 25px;
+    }
+    .match img{
+        width: 40%;
+    }
+    .match{
+        height: 30%;
+        padding: 5px;
+    }
+    .match img[src="images/equipe/juventuce.png"]{
+        width: 20%;
+    }
+    
+}
+@media (max-width:750px) {
+    .matches_c{
+        width: 100%;
+        padding: 50px 10px;
+    }
+    .match{
+        width: 100%;
+        gap: 10px;
+    }
+    .match h2{
+        font-size: 20px;
+    }
+    .match h1{
+        font-size: 24px;
+    }
+    .match img{
+        width: 40%;
+    }
+    .match .equipe1,.match .equipe2{
+        gap: 15%;
+    }
+    .match h2{
+        display: none;
+    }
 }

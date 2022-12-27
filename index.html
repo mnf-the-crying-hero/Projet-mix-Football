@@ -12,21 +12,28 @@
 </head>
 <body>  
          
- 
+        <div class="profil">
+
+        </div>
         <main class="menu">
         
                 <div class="play card"> 
-                <a href="play.html"> 
-                    <img src="images/div1.png"> 
-                    <div>
-                        <h1>JOUER</h1>
-                        <p class="desription">un quizz pour voir tes connaissance au football</p>
+           
+                    <div>  
+                        <a href="play.html">   <img src="images/div1.png">    </a>
+                    
                     </div>
-                </a>
+                  
+                    <div class="joue">
+                        <a href="play.html"> <h1>JOUER</h1>
+                        <p class="description">un quizz pour voir tes connaissance au football</p></a>
+                    </div>
+             
                 </div>
           
         <div class="droit">
-            <a href="matches.html">  <div class="matches card">
+            <a href="matches.html"> 
+            <div class="matches card">
                
                 <div class="text_hidden">
                     RETROUVER LES DERNIERS SCORES DES DERNIER MATCHES   
@@ -34,14 +41,28 @@
               
                 <div class="ronaldo"></div>
                 
-                <h1 class="vs">VS</h1>
+                <h1 class="vs gw">MATCHES</h1>
                 <div class="messi"></div>
             
             </div>   
             </a>
-            
+            <div class="regle ">
+                <div class="menu_icon">
+                    <i id="bar" class="fa fa-bars"></i>
+                </div>
+                <div class="text">
+                    <h1>Regle</h1>
+                    <p class="description">règles du jeu,origines</p>
+                </div>
+            </div>
         </div>
         </main>
-        
+        <script>
+        if (document.cookie.indexOf("username") == -1) {
+            window.location.href='home.html'
+        }
+        const cookieValue = document.cookie.split('; ').find((row) => row.startsWith('username='))?.split('=')[1];
+        document.querySelector(".profil").textContent=cookieValue;
+        </script>
 </body>
 </html>

@@ -1,4 +1,7 @@
 /*JOUER*/
+if (document.cookie.indexOf("username") == -1) {
+    window.location.href='home.html'
+}
 var requestURL1='matches.json';
 var matches_c=document.querySelector(".matches_c")
  

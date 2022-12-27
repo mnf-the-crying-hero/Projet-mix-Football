@@ -4,7 +4,7 @@
              "equipe2":"Real madrid",
              "equipe1Img":"images/equipe/barcelona_logo_PNG1.png",
              "equipe2Img":"images/equipe/Real_madrid_logo_PNG1.png",
-             "scores":[3,1]
+             "scores":[5,1]
                             
                 
      } ,
@@ -13,10 +13,53 @@
          "equipe2":"Chelsea",
          "equipe1Img":"images/equipe/arsenal_logo_PNG1.png",
          "equipe2Img":"images/equipe/Chelsea_logo_PNG1.png",
-         "scores":[3,1]
+         "scores":[3,0]
+                        
+            
+    },
+    {
+        "equipe1":"M city",
+         "equipe2":"M united",
+         "equipe1Img":"images/equipe/manchester_city_logo_PNG2.png",
+         "equipe2Img":"images/equipe/manchester_united_logo_PNG1.png",
+         "scores":[0,0]
+                        
+            
+    },
+    {
+        "equipe1":"juventuce",
+         "equipe2":"paris",
+         "equipe1Img":"images/equipe/juventuce.png",
+         "equipe2Img":"images/equipe/PSG_logo_PNG13.png",
+         "scores":[4,5]
+                        
+            
+    },
+    {
+        "equipe1":"JSK",
+         "equipe2":"USMH",
+         "equipe1Img":"images/equipe/Logo_JSK.png",
+         "equipe2Img":"images/equipe/usmh.png",
+         "scores":[0,5]
+                        
+            
+    },
+    {
+        "equipe1":"Algerie",
+         "equipe2":"cameroon",
+         "equipe1Img":"images/equipe/Algeria.png",
+         "equipe2Img":"images/equipe/cameroon.png",
+         "scores":[3,0]
+                        
+            
+    },
+    {
+        "equipe1":"england",
+         "equipe2":"france",
+         "equipe1Img":"images/equipe/england.png",
+         "equipe2Img":"images/equipe/france.png",
+         "scores":[1,2]
                         
             
     }
- 
-  
  ]
