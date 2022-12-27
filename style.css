@@ -407,7 +407,7 @@ button:hover{
     background-color: #474747;
 }
 .menu_play   .chose{
-    background-color: #0bbdb2;
+    background-image: linear-gradient(to right top, #396fbf, #3d626f, #436c71, #4771b1, #396fbf);
     
 }
 .menu_play   .correct{
